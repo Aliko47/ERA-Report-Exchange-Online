@@ -30,7 +30,10 @@ This script automatically connects to Exchange Online, counts all mailboxes in E
       - Exchange.ManageAsApp
       - After adding: Grant admin approval
 
-4. Modify config.json
+4. Start the script ERA-Report.ps1
+   - Run the script to create the config.json file
+
+5. Modify config.json
    - Open the JSON file config -> config.json and modify following:
      - AppID: (MS365 App ID)
      - ClientSecret: (The secret you created in step 2. Attention: Not the ID from the secret, the value!)
@@ -40,23 +43,23 @@ This script automatically connects to Exchange Online, counts all mailboxes in E
      - ToEmail: (To whom should the mail be sent?)
      - CCEmail: (If no CC is required, the value must still not be empty. The same address as "ToEmail" should be entered)
 
-5. Test it
+6. Test it
 
 ### Graph API and Mail Settings
 
 If you want the sent mails to be saved in the outbox, the following variable must be set to TRUE:
 
-    127 ....
-    128 saveToSentItems = "false"
-    129 ....
+    170 ....
+    171 saveToSentItems = "false"
+    172 ....
 
 You can also change the subject and the body of the mail:
 
-    78 ...
-    79 $subject = "ERA-Report ORGANIZATION $reportDate"
-    80 
-    81 $bodyText = @"
-    82 ...
+    121 ...
+    122 $subject = "ERA-Report ORGANIZATION $reportDate"
+    123 
+    124 $bodyText = @"
+    125 ...
 
 ### Logging
 
