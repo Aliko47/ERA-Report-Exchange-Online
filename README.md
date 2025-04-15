@@ -64,4 +64,4 @@ Logs will be reportet under the folder logs.
   
 ### Auto Start
 
-If you want to automate the script, you can use the task planner. 
+If you want to automate the script, you can use the task planner. The certificate must be installed in the computer's certificate store (LocalMachine), visible to the SYSTEM user when the script is executed by the Task Scheduler with “SYSTEM”, for example.
